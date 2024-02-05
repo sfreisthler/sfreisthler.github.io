@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --light-green: #529676;
+  --dark-green: #3C8361;
+  --red: #F1340B;
+  --dark-red: #D32E0A;
+  --tan: #DDB892;
+  --grey: #808080;
+  --black: #000000;
+  --yellow: #FFE599;
+  --pot: #E3A15C;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+svg {
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.text {
+  grid-column: 2;
+  padding-right: 120px;
+}
+
+.grid {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  height: 100vh;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.workshop-box {
+  grid-column: 1;
+  height: 100vh;
+  width: 100%;
+  text-align: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.workshop {
+  padding-top: 150px;
+}
+
+.about-body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75vw;
+}
+
+.about-title {
+  font-family: 'Literata', serif;
+  font-size: 3vw;
+}
+
+#github-logo, #linkedin-logo {
+  width: 50px;
+  padding: 7px;
+  padding-left: 0px;
+}
+
+@media screen and (max-width: 1000px) {
+  .grid {
+      margin: 0;
+      padding: 0;
+      display: block;
+      align-items: center;
+      justify-items: center;
+      
   }
+
+  .workshop-box {
+      text-align: center;
+      height: auto;
+  }
+
+  .workshop {
+      padding-top: 10px;
+  }
+
+  .about-body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3.75vw;
+  }
+  
+  .about-title {
+      font-family: 'Literata', serif;
+      font-size: 5.5vw;
+  }
+  
+  #github-logo, #linkedin-logo {
+      width: 50px;
+      padding: 7px;
+      padding-left: 0px;
+  }
+
+  .text {
+      padding: 10%;
+      padding-top: 0px;
+  }
+}
+
+/*######################################## Animation CSS ############################################*/
+
+#desk-right, #desk-left {
+  fill: var(--red);
+}
+
+#desk-bottom {
+  fill: var(--dark-red);
+}
+
+#desk-top {
+  fill: var(--tan);
+}
+
+#laptop-screen {
+  fill: white;
+}
+
+#laptop-frame, #laptop-keyboard, #computer-text {
+  fill: black;
+} 
+
+#lamp-shade, #lamp-pole, #lamp-base {
+  fill: var(--grey);
+}
+
+#lamp-base {
+  fill: var(--grey);
+}
+
+#lamp-lightbulb {
+  fill: var(--yellow);
+}
+
+#plant-pot {
+  fill: var(--pot);
+}
+
+#plant-stem, #plant-leaf4, #plant-leaf5, #plant-leaf6, #plant-leaf1, #plant-leaf2, #plant-leaf3 {
+  fill: var(--dark-green)
+}
+
+#computer-text {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+svg:hover #computer-text {
+  opacity: 1;
+}
+
+#lamp {
+opacity: 0;
+animation: fadeIn 2s ease-in-out forwards;
+}
+
+#laptop {
+  opacity: 0;
+  animation: fadeIn 5s ease-in-out forwards;
+}
+
+#plant {
+  animation: fromLeft 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}
+
+@keyframes fromLeft {
+  from {
+      transform: translateX(-100%);
+  } 
   to {
-    transform: rotate(360deg);
+      transform: translateX(0%);
   }
 }
