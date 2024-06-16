@@ -4,8 +4,22 @@ import github from './static/images/github-logo.png';
 import './App.css';
 import { Helmet } from 'react-helmet';
 import SkillsSection from './components/SkillsSection';
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    const lampLightbulb = document.getElementById('lamp-lightbulb');
+    const lamp = document.getElementById('lamp');
+    let isYellow = true;
+
+    if (lamp && lampLightbulb) {
+      lamp.addEventListener('click', function () {
+        isYellow = !isYellow;
+        lampLightbulb.style.fill = isYellow ? 'var(--yellow)' : 'grey';
+      });
+    }
+  }, []);
 
   return (
     <div>
@@ -94,20 +108,6 @@ function App() {
             </a>
           </div>
         </div>
-
-          {
-            document.addEventListener('DOMContentLoaded', function () {
-              var lampLightbulb = document.getElementById('lamp-lightbulb');
-              var lamp = document.getElementById('lamp');
-              var isYellow = true;
-
-              lamp.addEventListener('click', function () {
-                  console.log("here")
-                  isYellow = !isYellow;
-                  lampLightbulb.style.fill = isYellow ? 'var(--yellow)' : 'var(--grey)';
-              });
-            })
-          }
       </div>
       <SkillsSection />
     </div>
