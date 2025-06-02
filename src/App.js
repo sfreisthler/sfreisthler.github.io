@@ -1,5 +1,5 @@
-import linkedin from './static/images/linkedin-logo.png';
-import github from './static/images/github-logo.png';
+import linkedin from './assets/images/linkedin-logo.png';
+import github from './assets/images/github-logo.png';
 //import openai from './static/images/openai-logo.png';
 import './App.css';
 import { Helmet } from 'react-helmet';
