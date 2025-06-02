@@ -1,14 +1,14 @@
 import React from 'react';
 import './SkillsSection.css';
-import nodejs from '../assets/images/nodejs-logo.png';
-import linux from '../assets/images/linux-logo.png';
-import openai from '../assets/images/openai-logo.png';
-import postgres from '../assets/images/postgres-logo.png';
-import java from '../assets/images/java-logo.png';
-import python from '../assets/images/python-logo.png';
-import c from '../assets/images/c-language.png';
-import aws from '../assets/images/aws-logo.png';
-import LogoCard from './LogoCard';
+import nodejs from '../../assets/images/nodejs-logo.png';
+import linux from '../../assets/images/linux-logo.png';
+import openai from '../../assets/images/openai-logo.png';
+import postgres from '../../assets/images/postgres-logo.png';
+import java from '../../assets/images/java-logo.png';
+import python from '../../assets/images/python-logo.png';
+import c from '../../assets/images/c-language.png';
+import aws from '../../assets/images/aws-logo.png';
+import LogoCard from '../LogoCard/LogoCard';
 
 const SkillsSection = () => {
 
