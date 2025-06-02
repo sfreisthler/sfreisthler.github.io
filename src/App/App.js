@@ -1,9 +1,7 @@
 import linkedin from '../assets/images/linkedin-logo.png';
 import github from '../assets/images/github-logo.png';
-//import openai from './static/images/openai-logo.png';
 import './App.css';
 import { Helmet } from 'react-helmet';
-import SkillsSection from '../components/SkillsSection/SkillsSection';
 import { useEffect } from 'react';
 
 function App() {
@@ -109,7 +107,6 @@ function App() {
           </div>
         </div>
       </div>
-      <SkillsSection />
     </div>
   );
 }
