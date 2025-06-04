@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import linkedin from '../../assets/images/linkedin-logo.png';
 import github from '../../assets/images/github-logo.png';
+import ProjectsSection from '../../components/ProjectsSection/ProjectsSection';
+
 import './HomePage.css';
 
 //
@@ -124,6 +126,7 @@ function HomePage() {
           </div>
 		</div>
       </div>
+	  <ProjectsSection />
     </div>
   );
 }
