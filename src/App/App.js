@@ -1,7 +1,7 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import HomePage from '../pages/HomePage/HomePage';
+import ModularSynthPage from '../pages/ModularSynthPage/ModularSynthPage';
 
 function App() {
   return (
@@ -13,13 +13,7 @@ function App() {
         {/* Temporary placeholder for "/modular-synth" */}
         <Route
           path="/modular-synth"
-          element={
-            <div style={{ textAlign: 'center', padding: '2rem' }}>
-              <h1>Modular Synth (Coming Soon)</h1>
-              <p>This page is under construction.</p>
-            </div>
-          }
-        />
+          element={<ModularSynthPage />} />
 
         {/* Fallback 404 */}
         <Route path="*" element={<h2>Page not found</h2>} />
