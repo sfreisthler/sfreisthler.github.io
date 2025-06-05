@@ -7,8 +7,10 @@
 .section-title {
   font-size: 1.75rem;
   margin-bottom: 0.75rem;
+  font-family: 'Literata', serif;
 }
 
 .section-content {
   line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
 }
