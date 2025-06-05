@@ -1,0 +1,44 @@
+ .page-header {
+  position: relative;
+  text-align: center;  
+  margin: 4rem;
+  margin-top: 2rem;
+  padding: 1rem 0;            /* some vertical padding */
+}
+
+/* Back button styling */
+.page-header__back-button {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+  color: #333;                   /* dark text */
+  background-color: #f5f5f5;     /* light grey background */
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover / Active states for back button */
+.page-header__back-button:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.page-header__back-button:active {
+  background-color: #d1d1d1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Title styling */
+.page-header__title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #111;
+}
